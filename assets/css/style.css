@@ -7,7 +7,7 @@
   color: black;
 }
 
-.form {
+main {
   height: 100vh;
   background-color: azure;
 }
@@ -56,15 +56,15 @@ section form {
   flex-direction: column;
 }
 
-label {
+.tache {
   margin-right: 20px;
 }
 
-input {
+#tache {
   margin-right: 100px;
 }
 
-button {
+#button {
   width: 5vw;
   height: 5vh;
   display: flex;
@@ -75,7 +75,7 @@ button {
   margin-right: 20px;
 }
 
-button:hover {
+#button:hover {
   background-color: rebeccapurple;
   cursor: pointer;
 }
@@ -86,4 +86,23 @@ button:hover {
   background-color: white;
   box-shadow: 3px 3px 10px gray;
   border-radius: 5px;
+}
+
+/* !COLOR */
+.color {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 10px 0;
+}
+
+label {
+  margin: 10px 0;
+}
+
+button {
+  margin-top: 10px;
 }
