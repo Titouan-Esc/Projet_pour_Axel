@@ -8,9 +8,9 @@ const msg = document.querySelector('.msg');
 todoButton.addEventListener('click', (e) =>{
     e.preventDefault()
     
-    const l = document.createElement('li');
-    l.className = 'li';
-    l.appendChild(document.createTextNode(`${todoTache.value}`));
+    const newList = document.createElement('li');
+    newList.className = 'li';
+    newList.appendChild(document.createTextNode(`${todoTache.value}`));
 
     if(todoTache.value === "") {
         msg.innerHTML = 'Ho tu écrit quelque chose!!!';
@@ -26,12 +26,13 @@ todoButton.addEventListener('click', (e) =>{
         todoRemove.innerHTML = '<p> NO </p>';
         todoCheck.classList.add('check');
         todoRemove.classList.add('remove');
-        l.appendChild(todoCheck);
-        l.appendChild(todoRemove);
+        newList.appendChild(todoCheck);
+        newList.appendChild(todoRemove);
+        todoListe.appendChild(newList)
         todoTache.value = "";
 
     }
-    console.log(l);
+    console.log(newList);
 });
 
 // ?Bouton check et remove
