@@ -82,10 +82,17 @@ section form {
 
 .liste {
   width: 30vw;
-  height: 10vh;
+  height: 20vh;
   background-color: white;
   box-shadow: 3px 3px 10px gray;
   border-radius: 5px;
+}
+
+.li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 0;
 }
 
 /* !COLOR */
@@ -103,6 +110,6 @@ label {
   margin: 10px 0;
 }
 
-button {
+#color_button {
   margin-top: 10px;
 }
