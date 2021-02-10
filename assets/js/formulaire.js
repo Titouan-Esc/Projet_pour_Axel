@@ -56,6 +56,62 @@ todoListe.addEventListener("click", (e) => {
 });
 
 // ! REVIEW
+// Initialisation des constantes
+const nextBtn = document.querySelector(".next-btn");
+const prev = document.querySelector(".prev-btn");
+const random = document.querySelector(".random-btn");
+
+const imageContainer = document.querySelector("#img-container");
+const author = document.querySelector("#author");
+const job = document.querySelector(".job");
+const comment = document.querySelector("#comment");
+
+let currentReview = 0;
+
+window.addEventListener("DOMContentLoaded", () => {
+  const review = reviews[currentReview];
+  imageContainer.scr = review.scr;
+  author.innerText = review.name;
+  job.innerText = review.job;
+  comment.innerText = review.text;
+});
+
+function showPerson(person) {
+  const review = reviews[person];
+  console.log(review);
+  imageContainer.src = review.img;
+  author.innerText = review.name;
+  job.innerText = review.job;
+  comment.innerText = review.text;
+}
+
+prevBtn.addEventListener("click", () => {
+  currentReview--;
+  console.log(currentReview);
+  if (currentReview > reviews.length - 1) {
+    currentReview = 0;
+  }
+  showPerson(currentReview);
+});
+
+nextBtn.addEventListener("click", () => {
+  currentReview++;
+  console.log(currentReview);
+  if (currentReview < 0) {
+    currentReview = reviews.length - 1;
+  }
+  showPerson(currentReview);
+});
+
+randomBtn.addEventListener("click", () => {
+  newReview = Math.floor(Math.random() * reviews.length);
+  while (currentReview === newReview) {
+    newReview = Math.floor(Math.random() * reviews.length);
+  }
+  currentReview = newReview;
+  showPerson(currentReview);
+});
+
 const reviews = [
   {
     id: 1,
