@@ -32,6 +32,7 @@ nav ul li a:hover {
 }
 #person-img {
   width: 20vw;
+  border-radius: 15px;
 }
 
 .container {
