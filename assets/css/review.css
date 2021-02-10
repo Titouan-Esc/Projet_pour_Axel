@@ -1,3 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  height: 100vh;
+  background-color: azure;
+}
+/* * BARRE DE NAVIGATION */
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  padding: 0 100px;
+}
+
+nav ul {
+  width: 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a:hover {
+  color: rebeccapurple;
+}
 #person-img {
-  width: 40vw;
+  width: 20vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+#author {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.job {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rebeccapurple;
+}
+
+#comment {
+  width: 70%;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.button-container {
+  width: 50%;
+  height: 5vh;
+  padding-top: 15px;
+  margin: 0 auto;
+}
+
+.prev-btn {
+  width: 2vw;
+  height: 3vh;
+}
+
+.next-btn {
+  width: 2vw;
+  height: 3vh;
+}
+
+.random-btn {
+  width: 2vw;
+  height: 3vh;
 }
